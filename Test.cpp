@@ -4,7 +4,7 @@
 #include <string>
 using namespace std;
 
-TEST_CASE("first case") {
+TEST_CASE("famous quotes") {
     string text1 = "The order of the phoenix";
 	string parmotaitionOf_The[5] = { "the", "THE", "thE", "dhe", "Dhe"};
 	for (int i = 0; i < 5; i++)
