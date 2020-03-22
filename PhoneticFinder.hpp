@@ -1,4 +1,6 @@
 #include <string>
 using namespace std;
 
-string find(string text, string realWord);
+namespace phonetic {
+	string find(string text, string realWord);
+};
