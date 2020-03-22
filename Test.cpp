@@ -21,21 +21,21 @@ TEST_CASE("famous quotes") {
 	string text0 = "Very good famous quotes"; 
 	string parmotaitionOf_Very[5] = { "Wery","wERI","Veri","veri","veRY"};
 	for (int i = 0; i < 5; i++)
-		CHECK(find(text2, parmotaitionOf_Very[i]) == string("Very"));
+		CHECK(find(text0, parmotaitionOf_Very[i]) == string("Very"));
     
 	string parmotaitionOf_good[5] = { "Gout","gOUT","JooD","juud","gOOd"};
 	for (int i = 0; i < 5; i++)
-		CHECK(find(text2, parmotaitionOf_good[i]) == string("good"));
+		CHECK(find(text0, parmotaitionOf_good[i]) == string("good"));
     
 	string parmotaitionOf_famous[6] = { "bamuus","BamooS","FAMOUs","famouz",	
 										"PamuuZ","pamuoz"};
 	for (int i = 0; i < 6; i++)
-		CHECK(find(text2, parmotaitionOf_famous[i]) == string("famous"));
+		CHECK(find(text0, parmotaitionOf_famous[i]) == string("famous"));
     
 	string parmotaitionOf_quotes[10] = { "qootes","COODEZ","kuuTeS","CUotez","cuotez",
 										 "Koodes","Quotez","cuotes","qoutes","quotes"};
 	for (int i = 0; i < 10; i++)
-		CHECK(find(text2, parmotaitionOf_quotes[i]) == string("quotes"));
+		CHECK(find(text0, parmotaitionOf_quotes[i]) == string("quotes"));
 	
     string text1 = "The order of the phoenix"; 
 	string parmotaitionOf_The[5] = { "the", "THE", "thE", "dhe", "Dhe"};
