@@ -2,6 +2,7 @@
 #include "doctest.h"
 #include "PhoneticFinder.hpp"
 #include <string>
+#include <iostream>
 
 /*
 Letters that can be switchd:
@@ -15,8 +16,11 @@ Letters that can be switchd:
 	i, y
 	
 And all letter can be capital and small.
-*/
 
+* @author Eli, Ron and Tal
+
+*
+*/
 TEST_CASE("famous quotes") {
 	string text0 = "Very good famous quotes"; 
 	string parmotaitionOf_Very[5] = { "Wery","wERI","Veri","veri","veRY"};
@@ -74,4 +78,30 @@ TEST_CASE("famous quotes") {
 	for (int i = 0; i < 5; i++)
 		CHECK(phonetic::find(text2, parmotaitionOf_or[i]) == std::string("not"));
     
+    string text3 = "I want to be the king ";
+    string parmotaitionOf_King[10]= {"qing", "Qing", "cing","Cing", "KYNg", "KINJ","kinj","ginj","KinJ", "KiNj" };
+   for (int i = 0; i < 10; i++)
+    CHECK(phonetic::find(text3, parmotaitionOf_King[i]) == std::string("king"));
+
+   string parmotaitionOf_want[5]= {"the", "wanr", "WANa","wsnt","qant"};
+    for (int i = 0; i < 5; i++)
+        try
+        {
+            CHECK(phonetic::find(text3, parmotaitionOf_want[i]) == std::string("want"));
+        }
+        catch (exception& e)
+        {
+            cout << e.what() << '\n';
+        }
+    string text4 = "Students are the best";
+    string parmotaitionOf_Students[10]= {"studenett", "seuyde", "Studenent","ssddff", "KYNg", "","4","","a a", "Student s" };
+    for (int i = 0; i < 10; i++)
+        try {
+                    CHECK(phonetic::find(text4, parmotaitionOf_Students[i]) == std::string("Students"));
+        }
+    catch(exception& e)
+    {
+        cout << e.what() << '\n';
+    }
 }
+

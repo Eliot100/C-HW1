@@ -1,8 +1,12 @@
 
 #include <string>
+
+/*
+* @author Eli, Ron and Tal
+*/
 namespace phonetic {
     using namespace std;
-	string find(string text, string realWord ){
+	std::string find(string text, string realWord ){
 		return "randomWord";
 	}
 }
