@@ -31,13 +31,11 @@ TEST_CASE("famous quotes") {
 	for (int i = 0; i < 5; i++)
 		CHECK(phonetic::find(text0, parmotaitionOf_good[i]) == std::string("good"));
     
-	string parmotaitionOf_famous[6] = { "bamuus","BamooS","FAMOUs","famouz",	
-										"PamuuZ","pamuoz"};
+	string parmotaitionOf_famous[6] = { "bamuus","BamooS","FAMOUs","famouz","PamuuZ","pamuoz"};
 	for (int i = 0; i < 6; i++)
 		CHECK(phonetic::find(text0, parmotaitionOf_famous[i]) == std::string("famous"));
     
-	string parmotaitionOf_quotes[10] = { "qootes","COODEZ","kuuTeS","CUotez","cuotez",
-										 "Koodes","Quotez","cuotes","qoutes","quotes"};
+	string parmotaitionOf_quotes[10] = { "qootes","COODEZ","kuuTeS","CUotez","cuotez", "Koodes","Quotez","cuotes","qoutes","quotes"};
 	for (int i = 0; i < 10; i++)
 		CHECK(phonetic::find(text0, parmotaitionOf_quotes[i]) == std::string("quotes"));
 	
@@ -50,19 +48,16 @@ TEST_CASE("famous quotes") {
 	for (int i = 0; i < 5; i++)
 		CHECK(phonetic::find(text1, parmotaitionOf_order[i]) == std::string("order"));
     
-	string parmotaitionOf_of[10] = { "of", "OF", "uF", "Ub", "UB",
-									 "ob", "OB", "op", "OP", "up"};
+	string parmotaitionOf_of[10] = { "of", "OF", "uF", "Ub", "UB", "ob", "OB", "op", "OP", "up"};
 	for (int i = 0; i < 10; i++)
 		CHECK(phonetic::find(text1, parmotaitionOf_order[i]) == std::string("order"));
     
-	string parmotaitionOf_phoenix[5] = { "phoenix", "PhoenYx", "Fhuenix",
-										 "bHOENIX", "bhuenyx"};
+	string parmotaitionOf_phoenix[5] = { "phoenix", "PhoenYx", "Fhuenix","bHOENIX", "bhuenyx"};
 	for (int i = 0; i < 5; i++)
 		CHECK(phonetic::find(text1, parmotaitionOf_phoenix[i]) == std::string("phoenix"));
     
 	string text2 = "To be or not to be";
-	string parmotaitionOf_To[10] = { "To", "TO", "Tu","TU", "to",
-									 "tO", "tu","tU", "Do","dO"};
+	string parmotaitionOf_To[10] = { "To", "TO", "Tu","TU", "to", "tO", "tu","tU", "Do","dO"};
 	for (int i = 0; i < 10; i++)
 		CHECK(phonetic::find(text2, parmotaitionOf_To[i]) == std::string("To"));
     
