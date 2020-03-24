@@ -44,7 +44,7 @@ TEST_CASE("famous quotes") {
 	
 	string parmotaitionOf_order[5] = { "order", "Order", "urder", "orter", "urtER"};
 	for (int i = 0; i < 5; i++)
-		CHECK(phonetic::findfind(text1, parmotaitionOf_order[i]) == std::string("order"));
+		CHECK(phonetic::find(text1, parmotaitionOf_order[i]) == std::string("order"));
     
 	string parmotaitionOf_of[10] = { "of", "OF", "uF", "Ub", "UB",
 									 "ob", "OB", "op", "OP", "up"};
